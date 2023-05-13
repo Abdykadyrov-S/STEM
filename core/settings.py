@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import config 
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-vwt@232mz_mso2%unquwb*l+2^6uba*j7f(+u^@da+r7&^s*^^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     "apps.about",
     "apps.contacts",
     "apps.courses",
+    "apps.telegram",
 ]
 
 MIDDLEWARE = [
@@ -129,5 +132,6 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+TELEGRAM_TOKEN = config.TOKEN
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
