@@ -24,6 +24,7 @@ from apps.index import urls
 from apps.about import urls
 from apps.contacts import urls
 from apps.courses import urls
+from apps.events import urls
 
 
 urlpatterns = [
@@ -32,5 +33,6 @@ urlpatterns = [
     path('', include("apps.about.urls")),
     path('', include("apps.contacts.urls")),
     path('', include("apps.courses.urls")),
+    path('', include("apps.events.urls")),
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

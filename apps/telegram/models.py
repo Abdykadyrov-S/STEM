@@ -24,7 +24,7 @@ class TelegramUser(models.Model):
     )
 
     def __str__(self):
-        return f"{self.id_telegram}"
+        return f"{self.last_name}"
 
     class Meta:
         verbose_name = "Пользователь телеграмма"

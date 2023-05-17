@@ -30,3 +30,23 @@ class Courses(models.Model):
     class Meta:
         verbose_name = "Наши курсы"
         verbose_name_plural = "Наши курсы"
+
+class Buy(models.Model):
+    name = models.CharField(
+        max_length=155,
+        verbose_name="Имя пользователя"
+    )
+    email = models.EmailField(
+        verbose_name="Почта",
+        null=True,blank=True
+    )
+    phone = models.CharField(
+        max_length=155,
+        verbose_name="Номер телефона"
+    )
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "купить курс"
+        verbose_name_plural = "купить курсы"

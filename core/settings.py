@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "apps.contacts",
     "apps.courses",
     "apps.telegram",
+    "apps.events",
 ]
 
 MIDDLEWARE = [
