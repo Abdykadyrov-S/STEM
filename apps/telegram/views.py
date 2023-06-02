@@ -6,7 +6,7 @@ from .models import TelegramUser
 
 # Create your views here.
 bot = TeleBot(settings.TELEGRAM_TOKEN, threaded=False)
-admin_id = 1904375259
+admin_id = settings.ADMIN_ID
 
 @bot.message_handler(commands=['start'])
 def start(message:types.Message):
@@ -38,6 +38,7 @@ def send_mailing(message:types.Message):
 
 def get_text(message):
     bot.send_message(admin_id, message)
+
 
 
 @bot.message_handler()  

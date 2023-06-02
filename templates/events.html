@@ -28,14 +28,15 @@
 ==================================================-->
     <!-- Start: Featured Courses Section
 ==================================================-->
-    <section class="events-page">
-      <div class="container">
-        <div class="row">
+      <section class="events-page">
+        <div class="container">
+          <div class="row">
+          {% for event in events %}
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="feat_course_item">
               <div class="feat_cour_price">
-                <img src="{% static 'images/courses1.jpg'%}" alt="image">
-                <span class="feat_cour_p"> $170 </span>
+                <img src="{{event.foto_event.url}}" width="400" height="250" alt="image">
+                
               </div>
               <div class="feat_cour_lesson">
                 <span class="feat_cour_less">
@@ -43,8 +44,8 @@
                 <span class="feat_cour_stu">
                   <i class="pe-7s-date"></i> July 24, 2021 </span>
               </div>
-              <h4 class="feat_cour_tit"> Become a professional designer be with passion & dignity </h4>
-              <p> Lorem ipsum dolor sit amet consec tetur adipis icing elit. Volup tatem beatae .</p>
+              <h4 class="feat_cour_tit"> {{event.title_event}} </h4>
+              <p> {{event.event_desc}} </p>
               <div class="feat_cour_rating">
                 <span class="feat_cour_tag">
                   <i class="pe-7s-map-marker"></i> New Margania </span>
@@ -53,151 +54,10 @@
               </div>
             </div>
           </div>
-          <!-- /. col-lg-4 col-md-6 col-sm-12-->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="feat_course_item">
-              <div class="feat_cour_price">
-                <img src="{% static 'images/courses2.jpg'%}" alt="image">
-                <span class="feat_cour_p"> $280 </span>
-              </div>
-              <div class="feat_cour_lesson">
-                <span class="feat_cour_less">
-                  <i class="pe-7s-clock"></i> 5:30 PM - 06:30 PM </span>
-                <span class="feat_cour_stu">
-                  <i class="pe-7s-date"></i> July 24, 2021 </span>
-              </div>
-              <h4 class="feat_cour_tit"> Java programming A-Z fully classes with full task </h4>
-              <p> Lorem ipsum dolor sit amet consec tetur adipis icing elit. Volup tatem beatae .</p>
-              <div class="feat_cour_rating">
-                <span class="feat_cour_tag">
-                  <i class="pe-7s-map-marker"></i> New Margania </span>
-                <a href="single-event.html"> Join Event <span class="fal fa-angle-double-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /. col-lg-4 col-md-6 col-sm-12-->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="feat_course_item">
-              <div class="feat_cour_price">
-                <img src="{% static 'images/courses3.jpg'%}" alt="image">
-                <span class="feat_cour_p"> $240 </span>
-              </div>
-              <div class="feat_cour_lesson">
-                <span class="feat_cour_less">
-                  <i class="pe-7s-clock"></i> 5:30 PM - 06:30 PM </span>
-                <span class="feat_cour_stu">
-                  <i class="pe-7s-date"></i> July 24, 2021 </span>
-              </div>
-              <h4 class="feat_cour_tit"> You will fell in love with this mustly if you have desire</h4>
-              <p> Lorem ipsum dolor sit amet consec tetur adipis icing elit. Volup tatem beatae .</p>
-              <div class="feat_cour_rating">
-                <span class="feat_cour_tag">
-                  <i class="pe-7s-map-marker"></i> New Margania </span>
-                <a href="single-event.html"> Join Event <span class="fal fa-angle-double-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /. col-lg-4 col-md-6 col-sm-12-->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="feat_course_item">
-              <div class="feat_cour_price">
-                <img src="{% static 'images/courses4.jpg'%}" alt="image">
-                <span class="feat_cour_p"> $190 </span>
-              </div>
-              <div class="feat_cour_lesson">
-                <span class="feat_cour_less">
-                  <i class="pe-7s-clock"></i> 5:30 PM - 06:30 PM </span>
-                <span class="feat_cour_stu">
-                  <i class="pe-7s-date"></i> July 24, 2021 </span>
-              </div>
-              <h4 class="feat_cour_tit">Be passionated with your regularly exercise and stay fit </h4>
-              <p> Lorem ipsum dolor sit amet consec tetur adipis icing elit. Volup tatem beatae .</p>
-              <div class="feat_cour_rating">
-                <span class="feat_cour_tag">
-                  <i class="pe-7s-map-marker"></i> New Margania </span>
-                <a href="single-event.html"> Join Event <span class="fal fa-angle-double-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /. col-lg-4 col-md-6 col-sm-12-->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="feat_course_item">
-              <div class="feat_cour_price">
-                <img src="{% static 'images/courses5.jpg'%}" alt="image">
-                <span class="feat_cour_p"> $120 </span>
-              </div>
-              <div class="feat_cour_lesson">
-                <span class="feat_cour_less">
-                  <i class="pe-7s-clock"></i> 5:30 PM - 06:30 PM </span>
-                <span class="feat_cour_stu">
-                  <i class="pe-7s-date"></i> July 24, 2021 </span>
-              </div>
-              <h4 class="feat_cour_tit">Grow your business by mastered in some technique </h4>
-              <p> Lorem ipsum dolor sit amet consec tetur adipis icing elit. Volup tatem beatae .</p>
-              <div class="feat_cour_rating">
-                <span class="feat_cour_tag">
-                  <i class="pe-7s-map-marker"></i> New Margania </span>
-                <a href="single-event.html"> Join Event <span class="fal fa-angle-double-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /. col-lg-4 col-md-6 col-sm-12-->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="feat_course_item">
-              <div class="feat_cour_price">
-                <img src="{% static 'images/courses6.jpg'%}" alt="image">
-                <span class="feat_cour_p"> $140 </span>
-              </div>
-              <div class="feat_cour_lesson">
-                <span class="feat_cour_less">
-                  <i class="pe-7s-clock"></i> 5:30 PM - 06:30 PM </span>
-                <span class="feat_cour_stu">
-                  <i class="pe-7s-date"></i> July 24, 2021 </span>
-              </div>
-              <h4 class="feat_cour_tit"> Top 10 tips to grow up audience to progress business </h4>
-              <p> Lorem ipsum dolor sit amet consec tetur adipis icing elit. Volup tatem beatae .</p>
-              <div class="feat_cour_rating">
-                <span class="feat_cour_tag">
-                  <i class="pe-7s-map-marker"></i> New Margania </span>
-                <a href="single-event.html"> Join Event <span class="fal fa-angle-double-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /. col-lg-4 col-md-6 col-sm-12-->
+          {% endfor %}
+          
         </div>
-        <!-- /. row -->
-        <nav class="cat-page-navigation">
-          <ul class="pagination">
-            <li class="pagination-arrow">
-              <a href="#">
-                <i class="fal fa-angle-double-left"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">1</a>
-            </li>
-            <li>
-              <a class="active" href="#">2</a>
-            </li>
-            <li>
-              <a href="#">...</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li class="pagination-arrow">
-              <a href="#">
-                <i class="fal fa-angle-double-right"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+       
       <!-- /. container -->
     </section>
     <!-- End: Featured Courses Section

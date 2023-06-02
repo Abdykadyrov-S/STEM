@@ -133,6 +133,9 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-TELEGRAM_TOKEN = config.TOKEN
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# telegram
+TELEGRAM_TOKEN = config.TOKEN
+ADMIN_ID = config.ADMIN_ID
